@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui">
+
+
+
+    <h:head>
+        <link rel="icon" href="images/icono.png" type="image/png" />
+        <title>Registrarse</title>
+        <style>
+            .centrado{
+                position: absolute;
+                top:37%;
+                left:46%;
+                bottom: 0;
+                width: 500px;
+                height: 450px;
+                margin: auto;
+                margin-left: -200px;
+                margin-top: -150px;
+            }
+        </style>
+        <style>
+            .fondo{
+                background-image: url("./images/fon.jpg");
+            }
+        </style>
+    </h:head>
+    <h:body styleClass="fondo">
+
+        <h:form id="RegistroForm">
+            <b:panel title="Registrarse" collapsed="false" style-class="centrado">
+                
+                <b:row>
+                    <b:column medium-screen="4">
+                        <h:outputLabel value="Identificacion" for="idUsuario"/>
+                    </b:column>
+                    <b:column medium-screen="5">
+                        <b:inputText placeholder="ID" id="idUsuario"
+                                     required="true"
+                                     value="#{usuarioController.idUsuario}"/>
+                    </b:column>
+                    <b:column medium-screen="6" style-class="message">
+                        <b:message for="idUsuario"/>
+                    </b:column>
+                </b:row>
+
+                <b:row>
+                    <br/>
+                    <b:column medium-screen="4">
+                        <h:outputLabel value="Nombre de Usuario" for="nombreUsuario"/>
+                    </b:column>
+                    <b:column medium-screen="6">
+                        <b:inputText placeholder="Nombre" id="nombreUsuario"
+                                     required="true"
+                                     value="#{usuarioController.nombreUsuario}"/>
+                    </b:column>
+                    <b:column medium-screen="6" style-class="message">
+                        <b:message for="nombreUsuario"/>
+                    </b:column>
+                </b:row>
+                <b:row>
+                    <b:column medium-screen="4">
+                        <h:outputLabel value="Correo electronico" for="correoUsuario"/>
+                    </b:column>
+                    <b:column medium-screen="6">
+                        <b:inputText placeholder="Correo" id="correoUsuario"
+                                     required="true"
+                                     value="#{usuarioController.correoUsuario}"/>
+                    </b:column>
+                    <b:column medium-screen="6" style-class="message">
+                        <b:message for="correoUsuario"/>
+                    </b:column>
+                </b:row>
+                <b:row>
+                    <b:column medium-screen="4">
+                        <h:outputLabel value="Contraseña" for="pwUsuario"/>
+                    </b:column>
+                    <b:column medium-screen="5">
+                        <b:inputText placeholder="Contraseña" id="pwUsuario"
+                                     required="true"
+                                     value="#{usuarioController.pwUsuario}"/>
+                    </b:column>
+                    <b:column medium-screen="6" style-class="message">
+                        <b:message for="pwUsuario"/>
+                    </b:column>
+                </b:row>
+
+                <b:row>
+                    <b:column medium-screen="4">
+                        <h:outputLabel value="Edad" for="edadUsuario"/>
+                    </b:column>
+                    <b:column medium-screen="3">
+                        <b:inputText placeholder="Edad" id="edadUsuario"
+                                     required="true"
+                                     value="#{usuarioController.edadUsuario}"/>
+                    </b:column>
+                    <b:column medium-screen="6" style-class="message">
+                        <b:message for="edadUsuario"/>
+                    </b:column>
+                </b:row>
+                <br/><br/>
+                <b:column medium-screen="4"/>
+                <b:column medium-screen="6">
+                    <b:commandButton value="Registrarse"
+                                     action="#{usuarioController.registrar()}"
+                                     look="success"
+                                     style="width: 50%"/>    
+                </b:column>
+
+
+
+            </b:panel>
+
+        </h:form>  
+    </h:body>
+</html>

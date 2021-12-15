@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui">
+
+    <h:head>
+        <link rel="icon" href="images/icono.png" type="image/png" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="default.css"/>
+        <h:outputStylesheet name="cssLayout.css"/>
+        <title>Inicio</title>
+    </h:head>
+
+    <h:body>
+
+        <ui:insert name="top">
+            <b:navBar fluid="true" brand="Home" brand-href="/PrimerExamen-1/faces/index.xhtml">
+                <b:navbarLinks>
+                <b:navLink value="Listar" icon-awesome="fa-list-alt" href="/PrimerExamen-1/faces/videojuegos/lista.xhtml"/>
+                <b:navLink value="Insertar" icon-awesome="fa-cloud" href="/PrimerExamen-1/faces/videojuegos/insertar.xhtml"/>
+                <b:navLink value="Contactenos" icon-awesome="fa-phone" href="/PrimerExamen-1/faces/videojuegos/info.xhtml"/>
+                </b:navbarLinks>
+            </b:navBar>
+        </ui:insert>
+
+        <div id="content" class="center_content" style="padding-bottom: 570px">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+
+        <div id="bottom" style="margin-bottom: 0">
+            <ui:insert name="bottom">
+                
+            </ui:insert>
+        </div>
+
+    </h:body>
+
+</html>
