@@ -2,7 +2,8 @@ package Modelos;
 
 public class Reserva {
     
-    private int idCliente;
+    private int idReserva;
+    private String idCliente;
     private String nombre;
     private String descripcion;
     private double precio;
@@ -11,20 +12,27 @@ public class Reserva {
         
     }
 
-    public Reserva(int idCliente, String nombre, String descripcion, double precio) {
+    public Reserva(int idReserva, String idCliente, String nombre, String descripcion, double precio) {
+        this.idReserva = idReserva;
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
     }
-    
-    
 
-    public int getIdCliente() {
+    public int getIdReserva() {
+        return idReserva;
+    }
+
+    public void setIdReserva(int idReserva) {
+        this.idReserva = idReserva;
+    }
+    
+    public String getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(int idCliente) {
+    public void setIdCliente(String idCliente) {
         this.idCliente = idCliente;
     }
 

@@ -14,8 +14,8 @@ import java.util.List;
 @SessionScoped
 public class UsuarioController extends Usuario implements Serializable {
 
-     public UsuarioController() {
-        super(0,"","","");
+    public UsuarioController() {
+        super(java.sql.Types.NULL,"","","");
     }
     
     public String valida(){
