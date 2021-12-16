@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui">
+
+    <body>
+
+        <ui:composition template="./../resources/Templates/Template.xhtml">
+            <ui:define name="content">
+                    <h:form>
+                    <b:dataTable value="#{clienteController.clientes}"
+                                 var="cliente"
+                                 excel="true"
+                                 csv="true"
+                                 pdf="true"
+                                 columnVisibility="truen"
+                                 copy="true"
+                                 print="true">
+                        <b:dataTableColumn value="#{cliente.nombre}"
+                                           width="15%"
+                                           label="Nombre"/>
+                        <b:dataTableColumn value="#{cliente.apellido}"
+                                           width="19%"
+                                           label="Apellidos"/>
+                        <b:dataTableColumn value="#{cliente.email}"
+                                           width="19%"
+                                           label="Segundo Apellido"/>
+                        <b:dataTableColumn value="#{cliente.telefono}"
+                                           width="10%"
+                                           style="text-align: center"
+                                           label="Telefono"/>
+                        <b:dataTableColumn value="#{cliente.cedula}"
+                                           width="10%"
+                                           style="text-align: center"
+                                           label="Cedula"/>
+                    </b:dataTable>
+                    </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
