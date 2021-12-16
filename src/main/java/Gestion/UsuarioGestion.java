@@ -13,6 +13,7 @@ public class UsuarioGestion {
 
     private static final String SQL_VALIDA = "select nombreUsuario,correoUsuario,edadUsuario from usuario where idUsuario=? and pwUsuario=?";
 
+    
     public static Usuario Valida(int idUsuario, String pw) {
 
         Usuario usuario = null;

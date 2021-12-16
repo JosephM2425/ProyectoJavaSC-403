@@ -8,34 +8,37 @@
     <body>
 
         <ui:composition template="./../resources/Templates/Template.xhtml">
-
             <ui:define name="content">
                 <h:form>
-                    <b:dataTable value="#{reservaController.reservas}"
-                                 var="reserva"
+                    <b:dataTable value="#{tourController.toures}"
+                                 var="tour"
                                  excel="true"
                                  csv="true"
                                  pdf="true"
                                  columnVisibility="true"
                                  copy="true"
                                  print="true">
-                        <b:dataTableColumn value="#{reserva.idCliente}"
+                        <b:dataTableColumn value="#{tour.idtour}"
                                            width="15%"
-                                           label="Correo Cliente"/>
-                        <b:dataTableColumn value="#{reserva.nombre}"
+                                           label="ID del Tour"/>
+                        <b:dataTableColumn value="#{tour.destino}"
                                            width="19%"
-                                           label="Nombre de la Reserva"/>
-                        <b:dataTableColumn value="#{reserva.descripcion}"
+                                           label="Destino"/>
+                        <b:dataTableColumn value="#{tour.nombre}"
                                            width="19%"
+                                           label="Nombre del Tour"/>
+                        <b:dataTableColumn value="#{tour.descripcion}"
+                                           width="10%"
+                                           style="text-align: center"
                                            label="Descripcion"/>
-                        <b:dataTableColumn value="#{reserva.precio}"
+                        <b:dataTableColumn value="#{tour.precio}"
                                            width="10%"
                                            style="text-align: center"
                                            label="Precio"/>
-                        <b:dataTableColumn value="#{reserva.fecha}"
+                        <b:dataTableColumn value="#{tour.fecha}"
                                            width="10%"
                                            style="text-align: center"
-                                           label="Precio"/>
+                                           label="Fecha"/>
                     </b:dataTable>
                 </h:form>
             </ui:define>

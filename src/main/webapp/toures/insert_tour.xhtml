@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:b="http://bootsfaces.net/ui"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+    
+        <ui:composition template="./../resources/Templates/Template.xhtml">
+
+            <ui:define name="content">
+                    <b:column span="4"></b:column>
+                    <b:column span="8">
+                        
+                        <h:form id="insertTourForm">  
+                          
+                       <b:row>
+                            <b:column medium-screen="2">
+                                <h:outputLabel value="ID Tour" />
+                            </b:column>
+                            <b:column medium-screen="4">
+                                <b:inputText placeholder="ID Tour" id="ID Tour"
+                                             required="true"
+                                             value="#{tourController.idtour}"/>
+                            </b:column>
+                            <b:column medium-screen="6" style-class="message">
+                                <b:message for="idtour"/>
+                            </b:column>
+                        </b:row>
+                      
+                        <b:row>
+                            <b:column medium-screen="2">
+                                <h:outputLabel value="Destino del Tour" />
+                            </b:column>
+                            <b:column medium-screen="4">
+                                <b:inputText placeholder="Destino" id="Destino"
+                                             required="true"
+                                             value="#{tourController.destino}"/>
+                            </b:column>
+                            <b:column medium-screen="6" style-class="message">
+                                <b:message for="Destino"/>
+                            </b:column>
+                        </b:row>
+                            
+                            
+                        <b:row>
+                            <b:column medium-screen="2">
+                                <h:outputLabel value="Nombre del Tour" />
+                            </b:column>
+                            <b:column medium-screen="4">
+                                <b:inputTextarea placeholder="nombre" id="nombre"
+                                             required="true"
+                                             value="#{tourController.nombre}"/>
+                            </b:column>
+                            <b:column medium-screen="6" style-class="message">
+                                <b:message for="nombre"/>
+                            </b:column>
+                        </b:row>
+                            
+                        <b:row>
+                            <b:column medium-screen="2">
+                                <h:outputLabel value="Descripcion"/>
+                            </b:column>
+                            <b:column medium-screen="4">
+                                <b:datepicker id="descripcion"
+                                              required="true"
+                                              value="#{tourController.descripcion}"/>
+                            </b:column>
+                            <b:column medium-screen="6" style-class="message">
+                                <b:message for="fecha"/>
+                            </b:column>
+                        </b:row>
+                       
+                        
+                        <b:row>
+                            <b:column medium-screen="2">
+                                <h:outputLabel value="Precio"/>
+                            </b:column>
+                            <b:column medium-screen="4">
+                                <b:datepicker id="precio"
+                                              required="true"
+                                              value="#{tourController.precio}"/>
+                            </b:column>
+                            <b:column medium-screen="6" style-class="message">
+                                <b:message for="precio"/>
+                            </b:column>
+                        </b:row>
+                            
+                     <b:row>
+                            <b:column medium-screen="2">
+                                <h:outputLabel value="Fecha de Tour"/>
+                            </b:column>
+                            <b:column medium-screen="4">
+                                <b:datepicker id="fecha"
+                                              required="true"
+                                              value="#{tourController.fecha}"/>
+                            </b:column>
+                            <b:column medium-screen="6" style-class="message">
+                                <b:message for="fecha"/>
+                            </b:column>
+                        </b:row>
+                            
+                        </b:row>
+                                                                       
+                            <b:column medium-screen="6">
+                                <b:commandButton value="Insertar"
+                                                 action="#{tourController.insertar()}"
+                                                 look="success" icon-awesome="fa-edit"
+                                                 style="width: 100%"/>
+                            </b:column>
+                </h:form>  
+
+                    </b:column>
+                    <b:column span="2"></b:column>
+             </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

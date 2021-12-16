@@ -1,43 +1,46 @@
 package Controller;
-
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import Modelos.Reserva;
-import Gestion.ReservaGestion;
+import Gestion.TourGestion;
+import Modelos.Tour;
 import java.util.Date;
 import java.util.List;
 
-@Named(value = "reservaController")
+/*@author aherrado*/
+@Named(value = "tourController")
 @SessionScoped
-public class ReservaController extends Reserva implements Serializable {
 
-    public ReservaController() {
+public class TourController extends Tour implements Serializable{
+
+    //Tour: int idtour, String destino, String nombre, String descripcion, String precio, Date fecha
+    public TourController() {
     }
-        
-    public List<String> get_client_email(){
-        return ReservaGestion.getClientes();
-    }
+
+    
     
     public String insertar(){
         
-        if (ReservaGestion.insertar(this)){
-            return "list.xhtml";
+        if (TourGestion.insertar(this)){
+            return "list_tour.xhtml";
+            
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
-            "Error","Posible reserva duplicada");
+            "Error","Posible Tour duplicado");
             FacesContext.getCurrentInstance().addMessage("insertReservaForm:id",mensaje);
-            return "crear.xhtml";
+            return "crear_tour.xhtml";
         } 
     }
     
        
-    public List<Reserva> getReservas(){
+    public List<Tour> getToures(){
         
-        return ReservaGestion.getReservas();
+        return TourGestion.getToures();
         
     }
      
+    
+    
 }
