@@ -27,7 +27,7 @@ public class ReservaController extends Reserva implements Serializable {
             return "list.xhtml";
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
-            "Error","Posible reserva duplicada duplicada");
+            "Error","Posible reserva duplicada");
             FacesContext.getCurrentInstance().addMessage("insertReservaForm:id",mensaje);
             return "crear.xhtml";
         } 
