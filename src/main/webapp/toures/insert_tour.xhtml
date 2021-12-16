@@ -21,7 +21,7 @@
                                 <h:outputLabel value="ID Tour" />
                             </b:column>
                             <b:column medium-screen="4">
-                                <b:inputText placeholder="ID Tour" id="ID Tour"
+                                <b:inputText placeholder="IDTour" id="ID Tour"
                                              required="true"
                                              value="#{tourController.idtour}"/>
                             </b:column>
@@ -30,6 +30,7 @@
                             </b:column>
                         </b:row>
                       
+                            
                         <b:row>
                             <b:column medium-screen="2">
                                 <h:outputLabel value="Destino del Tour" />
@@ -50,7 +51,7 @@
                                 <h:outputLabel value="Nombre del Tour" />
                             </b:column>
                             <b:column medium-screen="4">
-                                <b:inputTextarea placeholder="nombre" id="nombre"
+                                <b:inputText placeholder="nombre" id="nombre"
                                              required="true"
                                              value="#{tourController.nombre}"/>
                             </b:column>
@@ -64,12 +65,12 @@
                                 <h:outputLabel value="Descripcion"/>
                             </b:column>
                             <b:column medium-screen="4">
-                                <b:datepicker id="descripcion"
+                                <b:inputText id="descripcion"
                                               required="true"
                                               value="#{tourController.descripcion}"/>
                             </b:column>
                             <b:column medium-screen="6" style-class="message">
-                                <b:message for="fecha"/>
+                                <b:message for="descripcion"/>
                             </b:column>
                         </b:row>
                        
@@ -79,7 +80,7 @@
                                 <h:outputLabel value="Precio"/>
                             </b:column>
                             <b:column medium-screen="4">
-                                <b:datepicker id="precio"
+                                <b:inputText id="precio"
                                               required="true"
                                               value="#{tourController.precio}"/>
                             </b:column>
@@ -101,16 +102,15 @@
                                 <b:message for="fecha"/>
                             </b:column>
                         </b:row>
-                            
-                        </b:row>
-                                                                       
-                            <b:column medium-screen="6">
+                        
+                        <b:column medium-screen="6">
                                 <b:commandButton value="Insertar"
                                                  action="#{tourController.insertar()}"
                                                  look="success" icon-awesome="fa-edit"
                                                  style="width: 100%"/>
                             </b:column>
-                </h:form>  
+                
+                        </h:form>  
 
                     </b:column>
                     <b:column span="2"></b:column>
