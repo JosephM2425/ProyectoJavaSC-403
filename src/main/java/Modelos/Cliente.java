@@ -2,18 +2,18 @@ package Modelos;
 
 public class Cliente {
     
-    private String id;
     private String nombre;
     private String apellido;
     private String email;
     private String telefono;
-
-    public Cliente(String id, String nombre, String apellido, String email, String telefono) {
-        this.id = id;
+    private String cedula;
+    
+    public Cliente(String nombre, String apellido, String email, String telefono, String cedula) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.telefono = telefono;
+        this.cedula = cedula;
     }
     
     public String getNombreCompleto(){
@@ -25,14 +25,6 @@ public class Cliente {
         
         return texto;      
         
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -66,7 +58,13 @@ public class Cliente {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    
-    
-    
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+     
 }
