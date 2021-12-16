@@ -6,7 +6,6 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import Gestion.TourGestion;
 import Modelos.Tour;
-import java.util.Date;
 import java.util.List;
 
 /*@author aherrado*/
