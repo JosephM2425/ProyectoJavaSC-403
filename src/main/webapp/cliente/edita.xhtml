@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui">
+    <body>
+
+        <ui:composition template="./../resources/Templates/Template.xhtml">
+            <ui:define name="content">
+                <h:form id="editaClienteForm">
+                    <b:panel title="Cliente" look="primary">
+                        
+                        <b:row>
+                            <b:column medium-screen="2">
+                                <h:outputLabel value="Nombre" for="nombre"/>
+                            </b:column>
+                            <b:column medium-screen="4">
+                                <b:inputText placeholder="Nombre" id="nombre"
+                                             required="true"
+                                             value="#{clienteController.nombre}"/>
+                            </b:column>
+                            <b:column medium-screen="6" style-class="message">
+                                <b:message for="nombre"/>
+                            </b:column>
+                        </b:row>
+                        
+                        <b:row>
+                            <b:column medium-screen="2">
+                                <h:outputLabel value="Apellidos" for="apellido"/>
+                            </b:column>
+                            <b:column medium-screen="4">
+                                <b:inputText placeholder="Apellido" id="apellido"
+                                             required="true"
+                                             value="#{clienteController.apellido}"/>
+                            </b:column>
+                            <b:column medium-screen="6" style-class="message">
+                                <b:message for="apellido1"/>
+                            </b:column>
+                        </b:row>
+                        
+                        <b:row>
+                            <b:column medium-screen="2">
+                                <h:outputLabel value="Email" for="Email"/>
+                            </b:column>
+                            <b:column medium-screen="4">
+                                <b:inputText placeholder="Email" id="email"
+                                             required="true"
+                                             value="#{clienteController.email}"/>
+                            </b:column>
+                            <b:column medium-screen="6" style-class="message">
+                                <b:message for="nombre"/>
+                            </b:column>
+                        </b:row>
+                        
+                        <b:row>
+                            <b:column medium-screen="2">
+                                <h:outputLabel value="Telefono" for="telefono"/>
+                            </b:column>
+                            <b:column medium-screen="4">
+                                <b:inputText placeholder="Telefono" id="telefono"
+                                             required="true"
+                                             value="#{clienteController.telefono}"/>
+                            </b:column>
+                            <b:column medium-screen="6" style-class="message">
+                                <b:message for="nombre"/>
+                            </b:column>
+                        </b:row>
+                        
+                        <b:row>
+                            <b:column medium-screen="2">
+                                <h:outputLabel value="Cedula" for="Cedula"/>
+                            </b:column>
+                            <b:column medium-screen="4">
+                                <b:inputText placeholder="Cedula" id="Cedula"
+                                             required="true"
+                                             value="#{clienteController.cedula}"/>
+                            </b:column>
+                            <b:column medium-screen="6" style-class="message">
+                                <b:message for="nombre"/>
+                            </b:column>
+                        </b:row>
+                     
+                        <b:row>
+                            <b:column medium-screen="2"/>
+                            <b:column medium-screen="6">
+                                <b:commandButton value="Insertar"
+                                                 action="#{clienteController.inserta()}"
+                                                 look="primary"
+                                                 style="width: 33%"/>
+                                <b:commandButton value="Eliminar"
+                                                 action="#{clienteController.elimina()}"
+                                                 look="danger"
+                                                 style="width: 33%"/>
+                                <b:commandButton value="Modificar"
+                                                 action="#{clienteController.modifica()}"
+                                                 look="success"
+                                                 style="width: 33%"/>
+                            </b:column>
+                        </b:row>
+                        
+                    </b:panel>
+                    
+                </h:form>  
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

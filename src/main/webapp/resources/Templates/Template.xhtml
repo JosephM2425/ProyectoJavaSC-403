@@ -16,11 +16,19 @@
     <h:body>
 
         <ui:insert name="top">
-            <b:navBar fluid="true" brand="Home" brand-href="/PrimerExamen-1/faces/index.xhtml">
+            <b:navBar fluid="true" brand="Home" brand-href="/ProyectoFinalCurso-1/faces/index.xhtml">
                 <b:navbarLinks>
-                <b:navLink value="Listar" icon-awesome="fa-list-alt" href="/PrimerExamen-1/faces/videojuegos/lista.xhtml"/>
-                <b:navLink value="Insertar" icon-awesome="fa-cloud" href="/PrimerExamen-1/faces/videojuegos/insertar.xhtml"/>
-                <b:navLink value="Contactenos" icon-awesome="fa-phone" href="/PrimerExamen-1/faces/videojuegos/info.xhtml"/>
+                <b:dropMenu value="Clientes" icon-awesome="fa-group">
+                    <b:navLink value="Listar" icon="fa-newspaper-o"
+                               href="/ProyectoFinalCurso-1/faces/cliente/list.xhtml"/>
+                    <b:navLink value="Gestion" href="/ProyectoFinalCurso-1/faces/cliente/edita.xhtml"/>
+                    <b:navLink value="Reporte" href="/ProyectoFinalCurso-1/faces/cliente/reporte.xhtml"/>
+                </b:dropMenu>
+                <b:dropMenu value="Reservas" icon-awesome="fa-paper">
+                    <b:navLink value="Listar" icon="fa-newspaper-o"
+                               href="/ProyectoFinalCurso-1/faces/reserva/list.xhtml"/>
+                    <b:navLink value="Inserta" href="/ProyectoFinalCurso-1/faces/reserva/crear.xhtml"/>
+                </b:dropMenu>
                 </b:navbarLinks>
             </b:navBar>
         </ui:insert>
