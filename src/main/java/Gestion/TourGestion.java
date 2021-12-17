@@ -13,7 +13,7 @@ import java.util.Date;
 public class TourGestion {
     
 ////Tour: int idtour, String destino, String nombre, String descripcion, String precio, Date fecha)
-     private static final String SQL_INSERT_TOUR = "INSERT INTO tourVALUES(?, ?, ?, ?, ?,?)";
+     private static final String SQL_INSERT_TOUR = "INSERT INTO tour VALUES(?, ?, ?, ?, ?, ?)";
     public static boolean insertar (Tour tour){
         
         try{

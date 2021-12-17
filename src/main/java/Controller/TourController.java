@@ -28,7 +28,7 @@ public class TourController extends Tour implements Serializable{
         }else{
             FacesMessage mensaje= new FacesMessage (FacesMessage.SEVERITY_ERROR,
             "Error","Posible Tour duplicado");
-            FacesContext.getCurrentInstance().addMessage("insertReservaForm:id",mensaje);
+            FacesContext.getCurrentInstance().addMessage("insertTourForm:id",mensaje);
             return "crear_tour.xhtml";
         } 
     }
